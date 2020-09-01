@@ -1,2 +1,7 @@
-<h1>Flats#index</h1>
-<p>Find me in app/views/flats/index.html.erb</p>
+<h1>All Our Flats</h1>
+<% @flats.each do |flat| %>
+  <h3><%= flat.name %></h3>
+  <p><%= flat.address %></p>
+  <br>
+  <hr>
+<% end %>

@@ -4,7 +4,7 @@ Flat.delete_all
 
 10.times do
   flat = Flat.create!(
-    name: "#{Faker::Address.community}",
+    name: "#{Faker::Address.community}, #{Faker::Address.state}",
     address: "#{Faker::Address.street_address}",
     description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
     price_per_night: [50, 75, 100, 150, 200, 230].sample,

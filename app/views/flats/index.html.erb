@@ -8,6 +8,7 @@
   <p><%= flat.number_of_guests %></p>
   <p><%= link_to("More info", flat_path(flat)) %></p>
   <p><%= link_to("Edit Flat", edit_flat_path(flat)) %></p>
+  <p><%= link_to("Remove Flat", flat_path(flat), method: "DELETE") %></p>
   
   <br>
   <hr>

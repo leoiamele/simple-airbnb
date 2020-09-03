@@ -1,7 +1,14 @@
 <h1>All Our Flats</h1>
 <% @flats.each do |flat| %>
+  <p></p>
+  <%= "All #{Flat.count} flats." %>
   <h3><%= flat.name %></h3>
   <p><%= flat.address %></p>
+  <p><%= flat.price_per_night %></p>
+  <p><%= flat.number_of_guests %></p>
+  <p><%= link_to("More info", flat_path(flat)) %></p>
+  <p><%= link_to("Edit Flat", edit_flat_path(flat)) %></p>
+  
   <br>
   <hr>
 <% end %>

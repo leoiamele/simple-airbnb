@@ -3,6 +3,7 @@
 <% @flats.each do |flat| %>
   <h3><%= flat.name %></h3>
   <p><%= flat.address %></p>
+  <%= image_tag(flat.picture_url, width: '250') %>
   <p><%= flat.price_per_night %></p>
   <p><%= flat.number_of_guests %></p>
   <p><%= link_to("More info", flat_path(flat)) %></p>

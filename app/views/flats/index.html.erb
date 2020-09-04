@@ -17,6 +17,7 @@
 <div class="container">
 <h1>All Our Flats</h1>
 <p><%= "All #{Flat.count} flats." %></p>
+<%= @query  %>
 <div class="row">
 <% @flats.each do |flat| %>
 

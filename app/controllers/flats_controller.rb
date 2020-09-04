@@ -40,6 +40,11 @@ class FlatsController < ApplicationController
     redirect_to flats_path
   end
 
+  def search
+    query = params[:query]
+    @flats = Flat.where("name LIKE '%#{query}%'")
+  end
+
   private
   def set_flat
     @flat = Flat.find(params[:id])

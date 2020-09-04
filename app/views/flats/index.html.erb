@@ -1,4 +1,4 @@
-<h1>All Our Flats</h1>
+<!-- <h1>All Our Flats</h1>
 <p><%= "All #{Flat.count} flats." %></p>
 <% @flats.each do |flat| %>
   <h3><%= flat.name %></h3>
@@ -12,5 +12,24 @@
   <br>
   <hr>
 <% end %>
+ -->
 
-<%= link_to("New flat", new_flat_path) %>
+<div class="container">
+<h1>All Our Flats</h1>
+<p><%= "All #{Flat.count} flats." %></p>
+<div class="row">
+<% @flats.each do |flat| %>
+
+  <div class="col-auto mb-3">
+    <div class="card" style="width: 18rem;">
+      <img src="<%= flat.picture_url %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>

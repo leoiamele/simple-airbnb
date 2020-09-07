@@ -9,10 +9,12 @@
   <% @flats.each do |flat| %>
     <div class="col-auto mb-3">
       <div class="card" style="width: 18rem;">
-        <img src="<%= flat.picture_url %>" class="card-img-top" alt="...">
+        <img src="<%= flat.picture_url %>" class="card-img-top" alt="<%= flat.name %>">
         <div class="card-body">
           <h5 class="card-title"><%= flat.name %></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text"><%= flat.address %></p>
+          <p class="card-text"><%= flat.number_of_guests %></p>
+          <p class="card-text"><%= flat.price_per_night %></p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>

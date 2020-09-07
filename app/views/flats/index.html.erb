@@ -1,36 +1,22 @@
-<!-- <h1>All Our Flats</h1>
-<p><%= "All #{Flat.count} flats." %></p>
-<% @flats.each do |flat| %>
-  <h3><%= flat.name %></h3>
-  <p><%= flat.address %></p>
-  <%= image_tag(flat.picture_url, width: '250') %>
-  <p><%= flat.price_per_night %></p>
-  <p><%= flat.number_of_guests %></p>
-  <p><%= link_to("More info", flat_path(flat)) %></p>
-  <p><%= link_to("Edit Flat", edit_flat_path(flat)) %></p>
-  <p><%= link_to("Remove Flat", flat_path(flat), method: "DELETE") %></p>
-  <br>
-  <hr>
-<% end %>
- -->
-
 <div class="container">
-<h1>All Our Flats</h1>
-<p><%= "All #{Flat.count} flats." %></p>
-<%= @query  %>
-<div class="row">
-<% @flats.each do |flat| %>
-
-  <div class="col-auto mb-3">
-    <div class="card" style="width: 18rem;">
-      <img src="<%= flat.picture_url %>" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"><%= flat.name %></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <h1>All Our Flats</h1>
+  <% if params['query'].present? %>
+    <p><%= "You searched for #{params['query']}. We found #{@flats.count} flat/s out of #{Flat.count} on our website." %></p>
+  <% else %>
+    <p><%= "All #{Flat.count} flats." %></p>
+  <% end %>
+  <div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-auto mb-3">
+      <div class="card" style="width: 18rem;">
+        <img src="<%= flat.picture_url %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
       </div>
     </div>
+  <% end %>
   </div>
-<% end %>
-</div>
 </div>

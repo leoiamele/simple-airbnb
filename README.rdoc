@@ -1,28 +1,20 @@
-== README
+# SIMPLE AIRBnB
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About The Project
 
-Things you may want to cover:
+This is a small proyect that allows the user to **Creat, Read, Update and Delete** flats. It was build as an small test based on a [Le Wagon](https://www.lewagon.com/) exercise.
 
-* Ruby version
+---
 
-* System dependencies
+### Built With
 
-* Configuration
+* [Ruby](https://www.ruby-lang.org/)
+* [Ruby on Rails](https://rubyonrails.org/)
+* [Bootstrap](https://getbootstrap.com/)
 
-* Database creation
+---
 
-* Database initialization
+### Contact
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Leandro Iamele -  leandroiamele@gmial.com

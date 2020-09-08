@@ -1,7 +1,7 @@
 <div class="container">
   <h1>All Our Flats</h1>
   <% if params['query'].present? %>
-    <p><%= "You searched for #{params['query']}. We found #{@flats.count} flat/s out of #{Flat.count} on our website." %></p>
+    <p><%= "You searched for #{params['query']}. We found #{@flats.count} #{@flats.count == 1 ? 'flat' : 'flats'} out of #{Flat.count} on our website." %></p>
   <% else %>
     <p><%= "All #{Flat.count} flats." %></p>
   <% end %>

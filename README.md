@@ -1,4 +1,4 @@
-# SIMPLE AIRBnB
+# SIMPLE AirBnB
 ---
 
 ## About The Project

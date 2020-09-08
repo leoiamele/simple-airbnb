@@ -17,4 +17,4 @@ This is a small proyect that allows the user to **Creat, Read, Update and Delete
 
 ### Contact
 
-Leandro Iamele -  leandroiamele@gmial.com
+Leandro Iamele -  leandroiamele@gmail.com

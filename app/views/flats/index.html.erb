@@ -13,9 +13,23 @@
         <div class="card-body">
           <h5 class="card-title"><%= flat.name %></h5>
           <p class="card-text"><%= flat.address %></p>
-          <p class="card-text"><%= flat.number_of_guests %></p>
-          <p class="card-text"><%= flat.price_per_night %></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="row">
+            <div class= "col-md-3">
+              <i class="material-icons">people</i>
+            </div>
+            <div class= "col-md-3">
+              <p class="card-text"><%= flat.number_of_guests %></p>
+            </div>
+            <div class= "col-md-3">
+              <i class="material-icons">euro_symbo</i>
+            </div>
+            <div class= "col-md-3">
+              <p class="card-text"><%= flat.price_per_night %></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <%= link_to("More Info", flat_path(flat), class: "btn btn-primary mt-3") %> 
+          </div>
         </div>
       </div>
     </div>
